@@ -1,6 +1,7 @@
 import {Component, NgModule, OnInit} from '@angular/core';
 import { TokenStorageService } from './_services/token-storage.service';
 import {FormsModule} from "@angular/forms";
+import {AuthService} from "./_services/auth.service";
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,7 @@ export class AppComponent implements OnInit {
     password:null
   };
 
-  constructor(private tokenStorageService: TokenStorageService) { }
+  constructor(private tokenStorageService: TokenStorageService,AuthService: AuthService) { }
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();

@@ -1,14 +1,5 @@
 <div id="app">
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <ul class="navbar-nav mr-auto" routerLinkActive="active">
-
-      <li class="nav-item" *ngIf="showAdminBoard">
-        <a href="/admin" class="nav-link" routerLink="admin"> add sensor</a>
-      </li>
-        <div class="/login" class="nav-link" *ngIf="!isLoggedIn" routerLink="user">
-
-        </div>
-    </ul>
+  <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="isLoggedIn">
 
     <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
       <li class="nav-item">
